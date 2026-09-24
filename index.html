@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!--
+  ==========================================================================
+  DOC START · Página de vendas (versão direta)
+  --------------------------------------------------------------------------
+  PLACEHOLDERS A PREENCHER (busque pelo nome):
+  LINK_CHECKOUT_DOC_START  → link do checkout (definido em js/main.js)
+  WHATSAPP_DOC_START       → link do WhatsApp (definido em js/main.js)
+  META_PIXEL_AQUI          → Pixel da Meta (neste <head>)
+  GOOGLE_ANALYTICS_AQUI    → Google Analytics (neste <head>)
+  URL_DA_PAGINA            → URL final (canonical e Open Graph)
+  OG_IMAGE_DOC_START       → imagem de compartilhamento 1200x630 (assets/img/og-doc-start.jpg)
+  FOTO_DR_LUAN             → assets/img/dr-luan-hero.jpg e assets/img/dr-luan.jpg
+
+  AINDA NÃO DEFINIDO — não publicar sem confirmação:
+  número de vagas · quantidade de parcelas · carga horária do certificado ·
+  tempo de acesso às gravações · garantia/cancelamento
+  ==========================================================================
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DOC START · Da teoria à decisão no plantão | Dr. Luan Inácio</title>
+<meta name="description" content="Curso preparatório para médicos recém-formados e formandos. 7 encontros ao vivo pelo Zoom, às segundas, 20h. Início em 05 de outubro de 2026.">
+<meta name="author" content="Dr. Luan Inácio">
+<meta name="theme-color" content="#06054B">
+<link rel="canonical" href="URL_DA_PAGINA">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="DOC START">
+<meta property="og:title" content="DOC START · Da teoria à decisão no plantão">
+<meta property="og:description" content="Curso preparatório para médicos recém-formados e formandos. 7 encontros ao vivo. Início em 05/10/2026.">
+<meta property="og:url" content="URL_DA_PAGINA">
+<meta property="og:image" content="URL_DA_PAGINA/assets/img/og-doc-start.jpg"><!-- OG_IMAGE_DOC_START -->
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DOC START · Da teoria à decisão no plantão">
+<meta name="twitter:description" content="Curso preparatório para médicos recém-formados e formandos.">
+<meta name="twitter:image" content="URL_DA_PAGINA/assets/img/og-doc-start.jpg">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script>document.documentElement.classList.add('js');</script>
+
+<!-- ================= META PIXEL =================
+     META_PIXEL_AQUI — cole aqui o código base do Pixel.
+     O js/main.js dispara InitiateCheckout nos botões de inscrição.
+================================================= -->
+
+<!-- ================= GOOGLE ANALYTICS =================
+     GOOGLE_ANALYTICS_AQUI — cole aqui a tag gtag.js.
+     O js/main.js dispara begin_checkout nos botões de inscrição.
+===================================================== -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "DOC START",
+  "description": "Curso preparatório para médicos recém-formados e formandos: raciocínio clínico e tomada de decisão no pronto-atendimento.",
+  "inLanguage": "pt-BR",
+  "provider": { "@type": "Person", "name": "Dr. Luan Inácio" },
+  "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "online", "startDate": "2026-10-05" },
+  "offers": { "@type": "Offer", "price": "1299", "priceCurrency": "BRL", "url": "LINK_CHECKOUT_DOC_START" }
+}
+</script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:2" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:2.2" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:2" d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-live" viewBox="0 0 24 24"><rect fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" x="3" y="6" width="13" height="12" rx="2.5"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M16 10.5l5-3v9l-5-3"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" cx="12" cy="12" r="8.5"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-screen" viewBox="0 0 24 24"><rect fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" x="3" y="4" width="18" height="12.5" rx="2"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M8.5 20.5h7M12 16.5v4"/><circle fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" cx="12" cy="10.2" r="2.4"/></symbol>
+  <symbol id="i-rec" viewBox="0 0 24 24"><rect fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" x="3" y="4.5" width="18" height="13" rx="2.5"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M10 8.5v5l4.5-2.5zM8 20.5h8"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M20 11.5a8 8 0 0 1-11.6 7.1L4 20l1.4-4.2A8 8 0 1 1 20 11.5z"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M9 11.5h.01M12.5 11.5h.01M16 11.5h.01"/></symbol>
+  <symbol id="i-cert" viewBox="0 0 24 24"><rect fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" x="3" y="4" width="18" height="12.5" rx="2"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M7 8.5h10M7 12h6"/><circle fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" cx="16.5" cy="17" r="2.5"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M15 19l-.5 3 2-1 2 1-.5-3"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5zM4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5M9 8h7M9 11.5h5"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M12 3l9 5-9 5-9-5zM3 12.5l9 5 9-5M3 17l9 5 9-5"/></symbol>
+  <symbol id="i-case" viewBox="0 0 24 24"><rect fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" x="4" y="3.5" width="16" height="18" rx="2.5"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M9 3.5h6v3H9zM8 11h8M8 14.5h8M8 18h5"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M4 6.5l1.5 1.5L8 5.5M4 12.5l1.5 1.5L8 11.5M4 18.5l1.5 1.5L8 17.5M11 7h9M11 13h9M11 19h9"/></symbol>
+  <symbol id="i-rx" viewBox="0 0 24 24"><rect fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" x="4" y="3" width="16" height="18.5" rx="2.5"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M8.5 16V8h3a2.25 2.25 0 0 1 0 4.5h-3M11 12.5l4.5 4.5M15.5 12.5L11 17"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M3 7a2 2 0 0 1 2-2h4l2 2.5h8a2 2 0 0 1 2 2V18a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+  <symbol id="i-support" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" x="3" y="13.5" width="4" height="6" rx="1.5"/><rect fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" x="17" y="13.5" width="4" height="6" rx="1.5"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M19 19.5c0 1.5-1.5 2-4 2h-2"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M3.5 16a8.5 8.5 0 1 1 17 0"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M12 16l4-5"/><circle fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" cx="12" cy="16" r="1.2"/></symbol>
+  <symbol id="i-branch" viewBox="0 0 24 24"><circle fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" cx="6" cy="5.5" r="2"/><circle fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" cx="6" cy="18.5" r="2"/><circle fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" cx="18" cy="9" r="2"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M6 7.5v9M6 13c0-3 3-4 10-4"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M12 4l9 16H3z"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M12 10v4.5M12 17.5h.01"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" cx="12" cy="12" r="8.5"/><circle fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" cx="12" cy="12" r="4.5"/><circle fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" cx="12" cy="12" r=".8"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M4 7h11l-3-3M15 7l-3 3M20 17H9l3-3M9 17l3 3"/></symbol>
+  <symbol id="i-exit" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M14 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4M10 16l4-4-4-4M14 12H4"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M13.5 6.5l4 4"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" cx="12" cy="8" r="4"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></symbol>
+  <symbol id="i-grad" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M2.5 9L12 4.5 21.5 9 12 13.5z"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M6.5 11v5c3 2.5 8 2.5 11 0v-5M21.5 9v5"/></symbol>
+  <symbol id="i-steth" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M6 3.5v5a4 4 0 0 0 8 0v-5"/><path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" d="M10 12.5v2a5 5 0 0 0 10 0V12"/><circle fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" cx="20" cy="10" r="2"/></symbol>
+</svg>
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="header-logo" href="#topo" aria-label="DOC START, voltar ao início">
+      <img src="assets/img/logo-doc-start.png" alt="DOC START" width="1650" height="353">
+    </a>
+    <a class="btn btn-sky btn-sm" href="LINK_CHECKOUT_DOC_START" data-checkout data-cta="header">Quero participar</a>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- 1. HERO ---------------------------------------------------------------->
+<section class="hero" id="topo" aria-labelledby="hero-title">
+  <div class="brand-mark hero-mark" aria-hidden="true"><span></span><span></span></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow eyebrow-sky reveal">Curso preparatório para médicos recém-formados e formandos</p>
+      <h1 id="hero-title" class="hero-title reveal">Da teoria à <span>decisão no plantão.</span></h1>
+      <p class="hero-sub reveal">Aprenda a organizar seu raciocínio clínico e tomar decisões com mais segurança diante dos principais cenários do pronto-atendimento.</p>
+
+      <ul class="facts reveal" aria-label="Informações da turma">
+        <li><svg class="ic" aria-hidden="true"><use href="#i-live"/></svg>7 encontros ao vivo</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>Segundas às 20h</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-screen"/></svg>Online pelo Zoom</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Início 05 de outubro</li>
+      </ul>
+
+      <div class="reveal">
+        <a class="btn btn-sky btn-lg" href="LINK_CHECKOUT_DOC_START" data-checkout data-cta="hero">
+          Quero participar da primeira turma<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <figure class="hero-photo reveal">
+      <div class="photo">
+        <!-- FOTO_DR_LUAN: retrato vertical ~1000x1250px -->
+        <img src="assets/img/dr-luan-hero.jpg" alt="Dr. Luan Inácio" width="1000" height="1250" fetchpriority="high" onerror="this.remove()">
+        <span class="photo-ph" aria-hidden="true">FOTO_DR_LUAN</span>
+      </div>
+      <figcaption>Com <strong>Dr. Luan Inácio</strong></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 2. IDENTIFICAÇÃO -------------------------------------------------------->
+<section class="section" aria-labelledby="id-title">
+  <div class="container">
+    <h2 id="id-title" class="display reveal">O paciente chegou.<br><span class="hl">E agora?</span></h2>
+
+    <div class="shift reveal">
+      <p>A faculdade ensina medicina.</p>
+      <p>Mas quando você começa a trabalhar, surge uma nova responsabilidade:</p>
+      <p class="shift-word">decidir.</p>
+    </div>
+
+    <ul class="q-grid" aria-label="Dúvidas comuns no plantão">
+      <li class="q reveal">Peço esse exame?</li>
+      <li class="q reveal">Posso dar alta?</li>
+      <li class="q reveal">Preciso observar?</li>
+      <li class="q reveal">Quando devo internar?</li>
+      <li class="q reveal">Quando devo transferir?</li>
+      <li class="q reveal">Estou deixando passar algo importante?</li>
+    </ul>
+
+    <p class="closing reveal">O DOC START foi criado para treinar justamente esse raciocínio.</p>
+  </div>
+</section>
+
+<!-- 3. MÉTODO --------------------------------------------------------------->
+<section class="section section-tint" id="metodo" aria-labelledby="met-title">
+  <div class="container">
+    <div class="head reveal">
+      <p class="eyebrow">Método DOC START</p>
+      <h2 id="met-title" class="h2">Um método para organizar sua decisão.</h2>
+    </div>
+
+    <ol class="steps" data-cycle>
+      <li class="reveal"><span class="n">01</span>Gravidade</li>
+      <li class="reveal"><span class="n">02</span>Hipótese</li>
+      <li class="reveal"><span class="n">03</span>Sinais de alarme</li>
+      <li class="reveal"><span class="n">04</span>Exames</li>
+      <li class="reveal"><span class="n">05</span>Destino</li>
+      <li class="reveal"><span class="n">06</span>Segurança</li>
+    </ol>
+
+    <p class="note reveal">Antes de decorar condutas, você aprende a entender <strong>por que</strong> está tomando cada decisão.</p>
+
+    <div class="why reveal">
+      <p>Toda conduta precisa responder:</p>
+      <p class="why-word">Por quê?</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4. O QUE VOCÊ VAI DESENVOLVER ------------------------------------------->
+<section class="section" aria-labelledby="dev-title">
+  <div class="container">
+    <div class="head reveal">
+      <p class="eyebrow">O que você vai desenvolver</p>
+      <h2 id="dev-title" class="h2">Competências para a prática.</h2>
+    </div>
+
+    <ul class="cards cards-4">
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-gauge"/></svg>Reconhecer gravidade</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-branch"/></svg>Organizar hipóteses</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-alert"/></svg>Identificar sinais de alarme</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-target"/></svg>Escolher exames com propósito</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-eye"/></svg>Decidir quando observar</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-route"/></svg>Entender quando internar ou transferir</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-exit"/></svg>Estruturar uma alta segura</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-pen"/></svg>Documentar melhor suas decisões</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 5. APRENDER DECIDINDO --------------------------------------------------->
+<section class="section section-navy" id="simulador" aria-labelledby="sim-title">
+  <div class="container">
+    <div class="head reveal">
+      <p class="eyebrow eyebrow-sky">Simulador de Plantão</p>
+      <h2 id="sim-title" class="h2 on-dark">Você não vai apenas assistir casos.<br><span class="sky">Vai precisar decidir.</span></h2>
+    </div>
+
+    <div class="sim-grid">
+      <ol class="flow" data-flow aria-label="Etapas de um caso no Simulador">
+        <li class="reveal">Paciente chegou</li>
+        <li class="reveal">Você recebe o caso</li>
+        <li class="reveal">Toma uma decisão</li>
+        <li class="reveal">Nova informação aparece</li>
+        <li class="reveal">Você reavalia</li>
+        <li class="reveal">Define a conduta</li>
+      </ol>
+
+      <div class="sim-side">
+        <p class="sim-text reveal">Os casos são apresentados em etapas para aproximar o treinamento da dinâmica real de um plantão.</p>
+        <ul class="bubbles" aria-label="Perguntas que você vai responder">
+          <li class="reveal">O que te preocupa?</li>
+          <li class="reveal">Qual é sua hipótese?</li>
+          <li class="reveal">Precisa de exame?</li>
+          <li class="reveal">O que esse exame mudaria?</li>
+          <li class="reveal">Trata ou observa?</li>
+          <li class="reveal">Interna ou transfere?</li>
+          <li class="reveal">Pode dar alta?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. COMO FUNCIONA -------------------------------------------------------->
+<section class="section" id="como-funciona" aria-labelledby="como-title">
+  <div class="container">
+    <div class="head reveal">
+      <p class="eyebrow">Como funciona</p>
+      <h2 id="como-title" class="h2">7 semanas para aproximar teoria e prática.</h2>
+    </div>
+
+    <ul class="cards cards-4 info">
+      <li class="card card-navy card-big reveal"><span class="big-n">7</span>encontros</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-live"/></svg>Online e ao vivo</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-calendar"/></svg>Segundas às 20h</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-screen"/></svg>Zoom</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-clock"/></svg>Aprox. 1h30 por encontro</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-rec"/></svg>Aulas gravadas</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-chat"/></svg>Grupo exclusivo no WhatsApp</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-cert"/></svg>Certificado</li>
+    </ul>
+    <!-- Tempo de acesso às gravações e carga horária do certificado: ainda não definidos. -->
+  </div>
+</section>
+
+<!-- 7. O QUE VOCÊ RECEBE ---------------------------------------------------->
+<section class="section section-tint" aria-labelledby="rec-title">
+  <div class="container">
+    <div class="head reveal">
+      <p class="eyebrow">O que você recebe</p>
+      <h2 id="rec-title" class="h2">Mais do que as aulas.</h2>
+    </div>
+
+    <ul class="cards cards-5">
+      <li class="card card-sky reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-layers"/></svg>Simulador de Plantão</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-book"/></svg>Apostila DOC START</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-case"/></svg>Casos clínicos</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-list"/></svg>Checklists práticos</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-rx"/></svg>Manual Prático de Prescrições</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-folder"/></svg>Materiais complementares</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-rec"/></svg>Gravações das aulas</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-chat"/></svg>Grupo exclusivo</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-support"/></svg>Suporte durante o curso</li>
+      <li class="card reveal"><svg class="ic-lg" aria-hidden="true"><use href="#i-cert"/></svg>Certificado</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 8. PARA QUEM É ---------------------------------------------------------->
+<section class="section" aria-labelledby="quem-title">
+  <div class="container">
+    <div class="head reveal">
+      <p class="eyebrow">Para quem é</p>
+      <h2 id="quem-title" class="h2">O DOC START foi pensado para quem está começando.</h2>
+    </div>
+
+    <ul class="who">
+      <li class="reveal"><span class="n">01</span>Recém-formados</li>
+      <li class="reveal"><span class="n">02</span>Médicos no início da carreira</li>
+      <li class="reveal"><span class="n">03</span>Formandos próximos da prática profissional</li>
+    </ul>
+
+    <p class="closing reveal">Especialmente para quem estudou medicina, mas percebeu que <strong>saber o conteúdo</strong> e <strong>decidir diante de um paciente</strong> são habilidades diferentes.</p>
+  </div>
+</section>
+
+<!-- 9. DR. LUAN ------------------------------------------------------------->
+<section class="section section-tint" id="professor" aria-labelledby="prof-title">
+  <div class="container prof">
+    <figure class="prof-photo reveal">
+      <div class="photo">
+        <!-- FOTO_DR_LUAN: retrato ~900x1100px -->
+        <img src="assets/img/dr-luan.jpg" alt="Retrato do Dr. Luan Inácio" width="900" height="1100" loading="lazy" onerror="this.remove()">
+        <span class="photo-ph" aria-hidden="true">FOTO_DR_LUAN</span>
+      </div>
+    </figure>
+
+    <div class="prof-copy">
+      <p class="eyebrow reveal">Quem vai conduzir o DOC START</p>
+      <h2 id="prof-title" class="h2 reveal">Dr. Luan Inácio</h2>
+
+      <ul class="prof-list reveal">
+        <li><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg>Aproximadamente 5 anos de formação</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-steth"/></svg>Pronto-socorro, urgência e emergência</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-branch"/></svg>Gestão e coordenação médica</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-grad"/></svg>Pós-graduação em Pediatria</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-grad"/></svg>Pós-graduação em Auditoria Médica e Gestão da Qualidade</li>
+      </ul>
+
+      <div class="origin reveal">
+        <p>Acompanhando médicos no início da carreira, ele percebeu uma dificuldade recorrente:</p>
+        <p class="origin-hl">muito conhecimento teórico, mas pouca estrutura para transformá-lo em decisão.</p>
+        <p>Foi a partir dessa necessidade que nasceu o DOC START.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. OFERTA -------------------------------------------------------------->
+<section class="section" id="oferta" aria-labelledby="oferta-title">
+  <div class="container">
+    <div class="offer reveal">
+      <div class="brand-mark offer-mark" aria-hidden="true"><span></span><span></span></div>
+      <p class="eyebrow eyebrow-sky">Condição especial</p>
+      <h2 id="oferta-title" class="offer-title">Primeira turma DOC START</h2>
+
+      <p class="price-old">De <s>R$ 1.599</s> por</p>
+      <p class="price"><span class="cur">R$</span>1.299</p>
+      <p class="price-note">Possibilidade de parcelamento</p>
+      <!-- Número de parcelas: ainda não definido. Inserir aqui quando confirmado. -->
+
+      <ul class="offer-list">
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>7 encontros ao vivo</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Materiais inclusos</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Grupo exclusivo</li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Certificado</li>
+      </ul>
+
+      <a class="btn btn-sky btn-lg btn-block" href="LINK_CHECKOUT_DOC_START" data-checkout data-cta="oferta">
+        Quero garantir minha vaga<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg>
+      </a>
+      <p class="offer-start"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg>Início 05 de outubro</p>
+    </div>
+  </div>
+</section>
+
+<!-- 11. FAQ ----------------------------------------------------------------->
+<section class="section section-tint" id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="head reveal">
+      <p class="eyebrow">Dúvidas rápidas</p>
+      <h2 id="faq-title" class="h2">Perguntas frequentes</h2>
+    </div>
+
+    <dl class="faq">
+      <div class="reveal"><dt>Quando começa?</dt><dd>05 de outubro de 2026.</dd></div>
+      <div class="reveal"><dt>As aulas são ao vivo?</dt><dd>Sim.</dd></div>
+      <div class="reveal"><dt>Onde acontecem?</dt><dd>Online, pelo Zoom.</dd></div>
+      <div class="reveal"><dt>Quantos encontros serão?</dt><dd>7 encontros.</dd></div>
+      <div class="reveal"><dt>As aulas serão gravadas?</dt><dd>Sim.</dd></div>
+      <div class="reveal"><dt>Tem certificado?</dt><dd>Sim.</dd></div>
+      <div class="reveal faq-wide"><dt>Existe suporte?</dt><dd>Sim. Os alunos terão um grupo exclusivo durante o curso.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- 12. CTA FINAL ----------------------------------------------------------->
+<section class="final" aria-labelledby="final-title">
+  <div class="brand-mark final-mark" aria-hidden="true"><span></span><span></span></div>
+  <div class="container final-inner">
+    <h2 id="final-title" class="final-title reveal">A teoria você já começou a construir.<br><span class="sky">Agora é hora de treinar a decisão.</span></h2>
+    <p class="final-sub reveal">Prepare seu raciocínio antes de precisar usá-lo no plantão.</p>
+    <div class="reveal">
+      <a class="btn btn-sky btn-lg" href="LINK_CHECKOUT_DOC_START" data-checkout data-cta="final">
+        Quero participar da primeira turma<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <img src="assets/img/logo-doc-start.png" alt="DOC START" width="1650" height="353" loading="lazy">
+    <a class="footer-link" href="WHATSAPP_DOC_START" data-whatsapp target="_blank" rel="noopener">Dúvidas? Fale pelo WhatsApp</a>
+    <p class="footer-legal">© <span data-year>2026</span> DOC START · Dr. Luan Inácio. O DOC START é um curso preparatório e não substitui residência, especialização, prática supervisionada ou protocolos institucionais.</p>
+  </div>
+</footer>
+
+<div class="sticky-cta" data-sticky-cta aria-hidden="true">
+  <div class="sticky-info"><span class="sticky-label">Primeira turma</span><span class="sticky-price">R$ 1.299</span></div>
+  <a class="btn btn-sky" href="LINK_CHECKOUT_DOC_START" data-checkout data-cta="sticky" tabindex="-1">Quero participar</a>
+</div>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

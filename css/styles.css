@@ -229,9 +229,13 @@ a { color: inherit; }
 .steps li.is-on .n { background: var(--navy); border-color: var(--navy); color: var(--sky); }
 
 .note { margin-top: 40px; font-size: 18px; max-width: 560px; }
-.why { margin-top: 32px; background: var(--navy); color: var(--paper); border-radius: 22px; padding: 32px 24px; }
-.why p:first-child { font: 500 17px/1.4 var(--display); color: var(--on-dark-muted); }
-.why-word { font: 700 clamp(64px, 18vw, 140px)/1 var(--display); color: var(--sky); letter-spacing: -.05em; margin-top: 8px; }
+.method-outcomes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 32px; }
+.method-outcomes li {
+  display: flex; align-items: center; gap: 12px; min-height: 72px; padding: 15px;
+  border: 1px solid var(--line); border-radius: 14px; background: var(--paper);
+  color: var(--navy); font: 600 14px/1.3 var(--display);
+}
+.method-outcomes .ic { color: var(--navy); background: var(--sky); border-radius: 8px; padding: 4px; width: 30px; height: 30px; }
 
 /* Cards genéricos */
 .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
@@ -250,25 +254,52 @@ a { color: inherit; }
 
 /* 5. SIMULADOR */
 .sim-grid { display: grid; gap: 48px; }
-.flow { display: grid; gap: 0; counter-reset: f; }
-.flow li {
-  counter-increment: f; position: relative; display: flex; align-items: center; gap: 16px;
-  padding: 16px 18px; border-radius: 14px; margin-bottom: 18px;
-  background: rgba(254, 254, 254, .05); border: 1px solid var(--line-dark);
-  font: 600 18px/1.2 var(--display); letter-spacing: -.01em;
-  transition: background-color .45s var(--ease), border-color .45s var(--ease), color .45s var(--ease);
+.sim-copy .h2 { margin-bottom: 22px; }
+.sim-text { font-size: 18px; color: var(--on-dark-muted); max-width: 500px; }
+.sim-points { display: grid; gap: 10px; margin-top: 28px; }
+.sim-points li { display: flex; align-items: center; gap: 12px; font: 500 15px/1.35 var(--display); color: var(--paper); }
+.sim-points .ic { width: 22px; height: 22px; padding: 3px; border-radius: 50%; color: var(--navy); background: var(--sky); }
+.sim-demo {
+  overflow: hidden; border: 1px solid rgba(95, 199, 252, .28); border-radius: 24px;
+  background: var(--paper); color: var(--navy); padding: 20px;
+  box-shadow: 0 32px 70px -36px rgba(95, 199, 252, .7);
 }
-.flow li::before { content: counter(f); width: 30px; height: 30px; flex: none; display: grid; place-items: center; border-radius: 50%; background: rgba(95, 199, 252, .16); color: var(--sky); font-size: 13px; }
-.flow li:not(:last-child)::after { content: ""; position: absolute; left: 32px; top: 100%; width: 2px; height: 18px; background: var(--line-dark); }
-.flow li.is-on { background: var(--sky); border-color: var(--sky); color: var(--navy); }
-.flow li.is-on::before { background: var(--navy); color: var(--sky); }
-.sim-text { font-size: 18px; color: var(--on-dark-muted); margin-bottom: 24px; max-width: 460px; }
-.bubbles { display: flex; flex-wrap: wrap; gap: 10px; }
-.bubbles li {
-  padding: 12px 16px; border-radius: 14px 14px 14px 4px;
-  background: var(--paper); color: var(--navy); font: 600 15px/1.3 var(--display);
+.sim-demo-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 22px; font: 600 11px/1.3 var(--display); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.sim-demo-top strong { padding: 7px 9px; border-radius: 8px; color: var(--navy); background: var(--tint); font-size: 10px; }
+.sim-patient { display: flex; align-items: center; gap: 13px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+.sim-patient > div { display: grid; gap: 2px; }
+.sim-patient strong { font: 600 15px/1.3 var(--display); }
+.sim-patient span { color: var(--muted); font-size: 13px; }
+.sim-avatar { display: grid; place-items: center; width: 42px; height: 42px; flex: none; border-radius: 12px; background: var(--sky); color: var(--navy) !important; }
+.sim-question { margin: 24px 0 14px; font: 600 clamp(20px, 4vw, 25px)/1.2 var(--display); color: var(--navy); }
+.sim-options { display: grid; gap: 8px; }
+.sim-options span { padding: 13px 14px; border: 1px solid var(--line); border-radius: 11px; font: 500 14px/1.3 var(--display); }
+.sim-options span:first-child { border-color: var(--sky); background: var(--tint); }
+.sim-update { margin: 18px -20px -20px; padding: 15px 20px; background: var(--navy); color: var(--paper); font-size: 13px; }
+.sim-update span { display: inline-block; margin-right: 8px; color: var(--sky); font: 600 10px/1.2 var(--display); letter-spacing: .12em; text-transform: uppercase; }
+
+/* 6. COMO FUNCIONA */
+.info-compact .card strong { color: inherit; font: 600 16px/1.25 var(--display); }
+.info-compact .card span:not(.big-n) { color: var(--muted); font-size: 14px; }
+.info-compact .card-navy strong, .info-compact .card-navy span { color: var(--paper); }
+
+/* 7. MATERIAIS */
+.materials-grid { display: grid; gap: 46px; align-items: center; }
+.materials-lead { margin-top: 20px; max-width: 560px; color: var(--muted); font-size: 17px; }
+.materials-list { display: grid; gap: 10px; margin-top: 28px; }
+.materials-list li { display: flex; align-items: center; gap: 13px; padding: 14px 16px; border-radius: 13px; background: var(--paper); color: var(--muted); font-size: 14px; }
+.materials-list .ic { width: 30px; height: 30px; padding: 5px; border-radius: 9px; background: var(--sky); color: var(--navy); }
+.materials-list strong { display: block; color: var(--navy); }
+.materials-visual {
+  position: relative; min-height: 410px; border-radius: 26px; overflow: hidden;
+  background: radial-gradient(circle at 50% 45%, rgba(95, 199, 252, .5), rgba(95, 199, 252, .09) 55%, transparent 72%);
 }
-.bubbles li:nth-child(3n+2) { background: var(--sky); }
+.material-shot { position: absolute; margin: 0; filter: drop-shadow(0 22px 22px rgba(6, 5, 75, .24)); }
+.material-shot img { width: 100%; height: auto; border: 3px solid var(--paper); border-radius: 13px; }
+.material-shot figcaption { position: absolute; left: 10px; bottom: 10px; padding: 6px 9px; border-radius: 8px; background: rgba(6, 5, 75, .9); color: var(--paper); font: 600 9px/1 var(--display); letter-spacing: .1em; text-transform: uppercase; }
+.material-shot-book { z-index: 2; left: 2%; top: 6px; width: 43%; transform: rotate(-5deg); }
+.material-shot-check { z-index: 3; right: 2%; top: 34px; width: 38%; transform: rotate(5deg); }
+.material-shot-slides { z-index: 1; left: 13%; bottom: 18px; width: 74%; transform: rotate(-2deg); }
 
 /* 8. PARA QUEM É */
 .who { display: grid; gap: 10px; }
@@ -391,7 +422,7 @@ a { color: inherit; }
   .vsl-play { width: 74px; height: 74px; margin: 5px 0 3px; }
   .vsl-play svg { width: 34px; height: 34px; }
   .vsl-placeholder > span:last-child { display: inline; }
-  .q-grid { grid-template-columns: repeat(3, 1fr); }
+  .q-grid { grid-template-columns: repeat(2, 1fr); }
   .faq { grid-template-columns: 1fr 1fr; }
   .faq-wide { grid-column: 1 / -1; }
   .who { grid-template-columns: repeat(3, 1fr); }
@@ -405,7 +436,9 @@ a { color: inherit; }
   .cards-5 { grid-template-columns: repeat(3, 1fr); }
   .card { min-height: 150px; padding: 24px 22px; }
   .q { min-height: 130px; padding: 22px; font-size: 18px; }
-  .why { padding: 44px 44px; display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  .q-grid { grid-template-columns: repeat(4, 1fr); }
+  .method-outcomes { grid-template-columns: repeat(4, 1fr); }
+  .materials-visual { min-height: 520px; }
   .offer { padding: 56px 48px 44px; }
   .faq { grid-template-columns: repeat(3, 1fr); }
   .faq-wide { grid-column: span 3; }
@@ -428,6 +461,8 @@ a { color: inherit; }
 
   .cards-5 { grid-template-columns: repeat(5, 1fr); }
   .sim-grid { grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .materials-grid { grid-template-columns: minmax(0, .86fr) minmax(460px, 1.14fr); gap: 70px; }
+  .materials-visual { min-height: 580px; }
   .prof { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 80px; align-items: center; }
   .prof-list { grid-template-columns: 1fr 1fr; }
   .prof-list li:last-child { grid-column: 1 / -1; }

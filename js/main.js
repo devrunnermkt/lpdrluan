@@ -3,12 +3,13 @@
    ========================================================================== */
 
 /* ---------------- CONFIGURAÇÃO ----------------
-   Preencha os links finais. Todos os botões [data-checkout] e links
-   [data-whatsapp] são atualizados automaticamente.
+   Preencha os links finais. Botões, WhatsApp e o player da VSL são
+   atualizados automaticamente.
 ------------------------------------------------ */
 const DOC_START_CONFIG = {
   checkoutUrl: 'LINK_CHECKOUT_DOC_START', // ex.: https://pay.plataforma.com/...
-  whatsappUrl: 'WHATSAPP_DOC_START'       // ex.: https://wa.me/55DDDNUMERO
+  whatsappUrl: 'WHATSAPP_DOC_START',      // ex.: https://wa.me/55DDDNUMERO
+  vslEmbedUrl: 'LINK_VSL_DOC_START'        // ex.: URL de embed do YouTube, Vimeo, Panda ou VTurb
 };
 
 (function () {
@@ -17,6 +18,18 @@ const DOC_START_CONFIG = {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const hasIO = 'IntersectionObserver' in window;
   const isPlaceholder = (url) => !/^https?:\/\//i.test(url);
+
+  /* ---------- VSL ---------- */
+  const vslPlayer = document.querySelector('[data-vsl-player]');
+  if (vslPlayer && !isPlaceholder(DOC_START_CONFIG.vslEmbedUrl)) {
+    const iframe = document.createElement('iframe');
+    iframe.src = DOC_START_CONFIG.vslEmbedUrl;
+    iframe.title = 'Apresentação em vídeo do curso DOC START';
+    iframe.loading = 'lazy';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.allowFullscreen = true;
+    vslPlayer.replaceChildren(iframe);
+  }
 
   /* ---------- Links + eventos de conversão ---------- */
   document.querySelectorAll('[data-checkout]').forEach((el) => {

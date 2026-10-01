@@ -8,6 +8,7 @@
   PLACEHOLDERS A PREENCHER (busque pelo nome):
   LINK_CHECKOUT_DOC_START  → link do checkout (definido em js/main.js)
   WHATSAPP_DOC_START       → link do WhatsApp (definido em js/main.js)
+  LINK_VSL_DOC_START       → URL de incorporação da VSL (definida em js/main.js)
   META_PIXEL_AQUI          → Pixel da Meta (neste <head>)
   GOOGLE_ANALYTICS_AQUI    → Google Analytics (neste <head>)
   URL_DA_PAGINA            → URL final (canonical e Open Graph)
@@ -155,7 +156,32 @@
   </div>
 </section>
 
-<!-- 2. IDENTIFICAÇÃO -------------------------------------------------------->
+<!-- 2. VSL ----------------------------------------------------------------->
+<section class="vsl-section" id="vsl" aria-labelledby="vsl-title">
+  <div class="brand-mark vsl-mark" aria-hidden="true"><span></span><span></span></div>
+  <div class="container vsl-inner">
+    <div class="vsl-head reveal">
+      <p class="eyebrow eyebrow-sky">Antes de entrar no próximo plantão</p>
+      <h2 id="vsl-title" class="h2 on-dark">Veja por que saber medicina não basta na hora de decidir.</h2>
+      <p>Uma conversa direta sobre o que muda quando a teoria encontra a responsabilidade do pronto-atendimento.</p>
+    </div>
+
+    <div class="vsl-shell reveal">
+      <div class="vsl-player" data-vsl-player>
+        <div class="vsl-placeholder">
+          <span class="vsl-kicker">Apresentação DOC START</span>
+          <span class="vsl-play" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 7.2v9.6L17 12z"/></svg>
+          </span>
+          <strong>Vídeo em breve</strong>
+          <span>Este espaço já está pronto para receber a VSL.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. IDENTIFICAÇÃO -------------------------------------------------------->
 <section class="section" aria-labelledby="id-title">
   <div class="container">
     <h2 id="id-title" class="display reveal">O paciente chegou.<br><span class="hl">E agora?</span></h2>
@@ -327,10 +353,9 @@
 <section class="section section-tint" id="professor" aria-labelledby="prof-title">
   <div class="container prof">
     <figure class="prof-photo reveal">
-      <div class="photo">
-        <!-- FOTO_DR_LUAN: retrato ~900x1100px -->
-        <img src="assets/img/dr-luan.jpg" alt="Retrato do Dr. Luan Inácio" width="900" height="1100" loading="lazy" onerror="this.remove()">
-        <span class="photo-ph" aria-hidden="true">FOTO_DR_LUAN</span>
+      <div class="prof-portrait">
+        <div class="prof-portrait-frame"><span class="photo-ph" aria-hidden="true">FOTO_DR_LUAN</span></div>
+        <img class="prof-portrait-img" src="assets/img/dr-luan-professor.svg" alt="Dr. Luan Inácio de jaleco branco" width="1122" height="1402" loading="lazy" onerror="this.closest('.prof-portrait').classList.add('is-empty');this.remove()">
       </div>
     </figure>
 

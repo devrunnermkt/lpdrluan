@@ -114,6 +114,30 @@ a { color: inherit; }
 .photo { position: relative; aspect-ratio: 4 / 5; border-radius: 22px; overflow: hidden; background: linear-gradient(160deg, rgba(95, 199, 252, .2), rgba(95, 199, 252, 0) 60%), var(--navy-2); border: 1px solid var(--line-dark); }
 .photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
 .photo-ph { position: absolute; inset: 0; display: grid; place-items: center; font: 600 12px var(--display); letter-spacing: .14em; color: rgba(254, 254, 254, .4); }
+
+/* Retrato da hero: recorte que "sai" da moldura, luz da marca atrás e base em degradê */
+.portrait { position: relative; padding-top: 20%; isolation: isolate; }
+.portrait::before { /* halo de luz atrás da cabeça, vazando a moldura */
+  content: ""; position: absolute; z-index: 0; left: 50%; top: 4%; width: 95%; aspect-ratio: 1;
+  transform: translateX(-50%); border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(95, 199, 252, .55), rgba(95, 199, 252, .18) 55%, rgba(95, 199, 252, 0));
+  filter: blur(18px); pointer-events: none;
+}
+.portrait-frame {
+  position: relative; z-index: 1; aspect-ratio: 4 / 5; border-radius: 22px; overflow: hidden;
+  border: 1px solid rgba(95, 199, 252, .35);
+  background:
+    radial-gradient(70% 55% at 50% 22%, rgba(95, 199, 252, .9), rgba(28, 110, 220, .45) 45%, rgba(6, 5, 75, 0) 80%),
+    linear-gradient(180deg, #0B1E8C 0%, var(--navy-2) 70%);
+}
+.portrait-img {
+  position: absolute; z-index: 2; left: 50%; bottom: 0; transform: translateX(-50%);
+  width: 96%; max-width: none; height: auto;
+  -webkit-mask-image: linear-gradient(to bottom, #000 74%, transparent 97%);
+  mask-image: linear-gradient(to bottom, #000 74%, transparent 97%);
+}
+.portrait .photo-ph { display: none; }
+.portrait.is-empty .photo-ph { display: grid; }
 .hero-photo figcaption { margin-top: 14px; font-size: 15px; color: var(--on-dark-muted); }
 .hero-photo figcaption strong { color: var(--paper); }
 

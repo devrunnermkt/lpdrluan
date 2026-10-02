@@ -13,8 +13,8 @@ assets/img/
 
 | Placeholder | Onde |
 | --- | --- |
-| `LINK_CHECKOUT_DOC_START` | `js/main.js` (`DOC_START_CONFIG.checkoutUrl`) |
-| `WHATSAPP_DOC_START` | `js/main.js` (`DOC_START_CONFIG.whatsappUrl`) |
+| `LINK_CHECKOUT_DOC_START` | `js/main.js` (`DOC_START_CONFIG.checkoutUrl`) — hoje aponta para o WhatsApp do Dr. Luan |
+| `WHATSAPP_DOC_START` | `js/main.js` (`WHATSAPP_NUMERO`) — preenchido: (12) 98837-6033 |
 | `LINK_VSL_DOC_START` | `js/main.js` (`DOC_START_CONFIG.vslEmbedUrl`) |
 | `META_PIXEL_AQUI` | `<head>` do `index.html` |
 | `GOOGLE_ANALYTICS_AQUI` | `<head>` do `index.html` |

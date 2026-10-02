@@ -6,9 +6,13 @@
    Preencha os links finais. Botões, WhatsApp e o player da VSL são
    atualizados automaticamente.
 ------------------------------------------------ */
+const WHATSAPP_NUMERO = '5512988376033'; // Dr. Luan: (12) 98837-6033
+const zap = (msg) => 'https://wa.me/' + WHATSAPP_NUMERO + '?text=' + encodeURIComponent(msg);
+
 const DOC_START_CONFIG = {
-  checkoutUrl: 'LINK_CHECKOUT_DOC_START', // ex.: https://pay.plataforma.com/...
-  whatsappUrl: 'WHATSAPP_DOC_START',      // ex.: https://wa.me/55DDDNUMERO
+  // Botões de inscrição: por enquanto levam ao WhatsApp. Troque pelo link do checkout quando existir.
+  checkoutUrl: zap('Olá! Quero participar da primeira turma do DOC START.'),
+  whatsappUrl: zap('Olá! Tenho uma dúvida sobre o DOC START.'),
   vslEmbedUrl: 'LINK_VSL_DOC_START'        // ex.: URL de embed do YouTube, Vimeo, Panda ou VTurb
 };
 
@@ -34,8 +38,10 @@ const DOC_START_CONFIG = {
   /* ---------- Links + eventos de conversão ---------- */
   document.querySelectorAll('[data-checkout]').forEach((el) => {
     el.setAttribute('href', DOC_START_CONFIG.checkoutUrl);
+    el.setAttribute('target', '_blank');
+    el.setAttribute('rel', 'noopener');
     el.addEventListener('click', (ev) => {
-      if (typeof window.fbq === 'function') window.fbq('track', 'InitiateCheckout', { value: 1299, currency: 'BRL' });
+      if (typeof window.fbq === 'function') window.fbq('track', 'Contact', { content_name: 'Quero participar', value: 1299, currency: 'BRL' });
       if (typeof window.gtag === 'function') window.gtag('event', 'begin_checkout', { value: 1299, currency: 'BRL', cta_origem: el.dataset.cta || 'cta' });
       if (isPlaceholder(DOC_START_CONFIG.checkoutUrl)) {
         ev.preventDefault();

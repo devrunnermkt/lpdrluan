@@ -20,6 +20,6 @@ assets/img/
 | `GOOGLE_ANALYTICS_AQUI` | `<head>` do `index.html` |
 | `URL_DA_PAGINA` | canonical e Open Graph no `index.html` |
 | `OG_IMAGE_DOC_START` | `assets/img/og-doc-start.jpg` (1200×630) |
-| `FOTO_DR_LUAN` | `assets/img/dr-luan-recorte.png` (hero, recorte PNG transparente 1200×1500) e `assets/img/dr-luan.jpg` |
+| `FOTO_DR_LUAN` | `assets/img/dr-luan-hero.webp/.png` e `dr-luan-professor.webp/.png` (recortes transparentes; originais fora do repo, em `../fotos`) |
 
 Ainda não definidos (não publicar sem confirmação): número de vagas, quantidade de parcelas, carga horária do certificado, tempo de acesso às gravações, garantia/cancelamento.

@@ -131,8 +131,9 @@ a { color: inherit; }
     linear-gradient(180deg, #0B1E8C 0%, var(--navy-2) 70%);
 }
 .portrait-img {
+  /* foto em pé e estreita: dimensionada pela altura, com a cabeça saindo da moldura */
   position: absolute; z-index: 2; left: 50%; bottom: 0; transform: translateX(-50%);
-  width: 96%; max-width: none; height: auto;
+  height: 104%; width: auto; max-width: none;
   -webkit-mask-image: linear-gradient(to bottom, #000 74%, transparent 97%);
   mask-image: linear-gradient(to bottom, #000 74%, transparent 97%);
 }
@@ -312,7 +313,11 @@ a { color: inherit; }
 /* 9. PROFESSOR */
 .prof { display: grid; gap: 40px; }
 .prof-photo { margin: 0; width: 100%; max-width: 440px; position: relative; }
-.prof-portrait { position: relative; aspect-ratio: 4 / 5; isolation: isolate; }
+.prof-portrait {
+  position: relative; aspect-ratio: 4 / 5; isolation: isolate;
+  /* corta as laterais da foto (braços) na borda da moldura, mas deixa a cabeça sair por cima */
+  clip-path: polygon(0 -40%, 100% -40%, 100% 100%, 0 100%);
+}
 .prof-portrait::before {
   content: ""; position: absolute; z-index: 0; left: 50%; top: 0; width: 96%; aspect-ratio: 1;
   transform: translateX(-50%); border-radius: 50%; filter: blur(20px);
@@ -331,8 +336,8 @@ a { color: inherit; }
   background: linear-gradient(to bottom, transparent, rgba(6, 5, 75, .72));
 }
 .prof-portrait-img {
-  position: absolute; z-index: 2; left: 50%; bottom: -1%; transform: translateX(-50%);
-  width: 108%; max-width: none; height: auto; filter: drop-shadow(0 20px 20px rgba(3, 2, 47, .25));
+  position: absolute; z-index: 2; left: 0; bottom: 0;
+  width: 100%; max-width: none; height: auto;
   -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent 99%);
   mask-image: linear-gradient(to bottom, #000 78%, transparent 99%);
 }

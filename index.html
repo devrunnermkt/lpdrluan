@@ -13,7 +13,7 @@
   GOOGLE_ANALYTICS_AQUI    → Google Analytics (neste <head>)
   URL_DA_PAGINA            → URL final (canonical e Open Graph)
   OG_IMAGE_DOC_START       → imagem de compartilhamento 1200x630 (assets/img/og-doc-start.jpg)
-  FOTO_DR_LUAN             → assets/img/dr-luan-recorte.png (hero, PNG transparente) e assets/img/dr-luan.jpg
+  FOTO_DR_LUAN             → assets/img/dr-luan-hero.(webp|png) e dr-luan-professor.(webp|png) — recortes; originais em ../fotos
 
   AINDA NÃO DEFINIDO — não publicar sem confirmação:
   número de vagas · quantidade de parcelas · carga horária do certificado ·
@@ -144,11 +144,11 @@
     <figure class="hero-photo reveal">
       <div class="portrait">
         <div class="portrait-frame"><span class="photo-ph" aria-hidden="true">FOTO_DR_LUAN</span></div>
-        <!-- FOTO_DR_LUAN: recorte PNG com fundo transparente, 1200x1500px (4:5).
+        <!-- FOTO_DR_LUAN: recorte com fundo transparente (original em ../fotos).
              A luz de fundo, a moldura e o degradê da base são feitos no CSS. -->
         <picture>
-          <source srcset="assets/img/dr-luan-recorte.webp" type="image/webp">
-          <img class="portrait-img" src="assets/img/dr-luan-recorte.png" alt="Dr. Luan Inácio" width="1000" height="1548" fetchpriority="high" onerror="this.closest('.portrait').classList.add('is-empty');this.remove()">
+          <source srcset="assets/img/dr-luan-hero.webp" type="image/webp">
+          <img class="portrait-img" src="assets/img/dr-luan-hero.png" alt="Dr. Luan Inácio" width="616" height="1300" fetchpriority="high" onerror="this.closest('.portrait').classList.add('is-empty');this.remove()">
         </picture>
       </div>
       <figcaption>Com <strong>Dr. Luan Inácio</strong></figcaption>
@@ -336,7 +336,10 @@
     <figure class="prof-photo reveal">
       <div class="prof-portrait">
         <div class="prof-portrait-frame"><span class="photo-ph" aria-hidden="true">FOTO_DR_LUAN</span></div>
-        <img class="prof-portrait-img" src="assets/img/dr-luan-professor.svg" alt="Dr. Luan Inácio de jaleco branco" width="1122" height="1402" loading="lazy" onerror="this.closest('.prof-portrait').classList.add('is-empty');this.remove()">
+        <picture>
+          <source srcset="assets/img/dr-luan-professor.webp" type="image/webp">
+          <img class="prof-portrait-img" src="assets/img/dr-luan-professor.png" alt="Dr. Luan Inácio sorrindo, de terno e estetoscópio" width="1000" height="1398" loading="lazy" onerror="this.closest('.prof-portrait').classList.add('is-empty');this.remove()">
+        </picture>
       </div>
     </figure>
 

@@ -16,7 +16,7 @@
   FOTO_DR_LUAN             → assets/img/dr-luan-hero.(webp|png) e dr-luan-professor.(webp|png) — recortes; originais em ../fotos
 
   AINDA NÃO DEFINIDO — não publicar sem confirmação:
-  número de vagas · quantidade de parcelas · carga horária do certificado ·
+  número de vagas · carga horária do certificado ·
   tempo de acesso às gravações · garantia/cancelamento
   ==========================================================================
 -->
@@ -68,7 +68,7 @@
   "inLanguage": "pt-BR",
   "provider": { "@type": "Person", "name": "Dr. Luan Inácio" },
   "hasCourseInstance": { "@type": "CourseInstance", "courseMode": "online", "startDate": "2026-10-05" },
-  "offers": { "@type": "Offer", "price": "1299", "priceCurrency": "BRL", "url": "https://wa.me/5512988376033" }
+  "offers": { "@type": "Offer", "price": "1099", "priceCurrency": "BRL", "url": "https://wa.me/5512988376033" }
 }
 </script>
 </head>
@@ -334,12 +334,13 @@
 <section class="section section-tint" id="professor" aria-labelledby="prof-title">
   <div class="container prof">
     <figure class="prof-photo reveal">
-      <div class="prof-portrait">
-        <div class="prof-portrait-frame"><span class="photo-ph" aria-hidden="true">FOTO_DR_LUAN</span></div>
+      <div class="photo prof-photo-frame">
+        <!-- Foto com o fundo original, recortada em 4:5 (original em ../fotos) -->
         <picture>
           <source srcset="assets/img/dr-luan-professor.webp" type="image/webp">
-          <img class="prof-portrait-img" src="assets/img/dr-luan-professor.png" alt="Dr. Luan Inácio sorrindo, de terno e estetoscópio" width="1000" height="1398" loading="lazy" onerror="this.closest('.prof-portrait').classList.add('is-empty');this.remove()">
+          <img src="assets/img/dr-luan-professor.jpg" alt="Dr. Luan Inácio sorrindo, de terno e estetoscópio" width="900" height="1125" loading="lazy" onerror="this.remove()">
         </picture>
+        <span class="photo-ph" aria-hidden="true">FOTO_DR_LUAN</span>
       </div>
     </figure>
 
@@ -373,9 +374,9 @@
       <h2 id="oferta-title" class="offer-title">Primeira turma DOC START</h2>
 
       <p class="price-old">De <s>R$ 1.599</s> por</p>
-      <p class="price"><span class="cur">R$</span>1.299</p>
-      <p class="price-note">Possibilidade de parcelamento</p>
-      <!-- Número de parcelas: ainda não definido. Inserir aqui quando confirmado. -->
+      <p class="price-tag">À vista</p>
+      <p class="price"><span class="cur">R$</span>1.099</p>
+      <p class="price-note">ou <strong>R$ 1.299 em 3x sem juros</strong><br>3x de R$ 433</p>
 
       <ul class="offer-list">
         <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>7 encontros ao vivo</li>
@@ -437,7 +438,7 @@
 </footer>
 
 <div class="sticky-cta" data-sticky-cta aria-hidden="true">
-  <div class="sticky-info"><span class="sticky-label">Primeira turma</span><span class="sticky-price">R$ 1.299</span></div>
+  <div class="sticky-info"><span class="sticky-label">Primeira turma</span><span class="sticky-price">R$ 1.099 <small>à vista</small></span></div>
   <a class="btn btn-sky" href="https://wa.me/5512988376033?text=Ol%C3%A1!%20Quero%20participar%20da%20primeira%20turma%20do%20DOC%20START." target="_blank" rel="noopener" data-checkout data-cta="sticky" tabindex="-1">Quero participar</a>
 </div>
 

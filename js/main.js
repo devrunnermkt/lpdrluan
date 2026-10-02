@@ -41,8 +41,8 @@ const DOC_START_CONFIG = {
     el.setAttribute('target', '_blank');
     el.setAttribute('rel', 'noopener');
     el.addEventListener('click', (ev) => {
-      if (typeof window.fbq === 'function') window.fbq('track', 'Contact', { content_name: 'Quero participar', value: 1299, currency: 'BRL' });
-      if (typeof window.gtag === 'function') window.gtag('event', 'begin_checkout', { value: 1299, currency: 'BRL', cta_origem: el.dataset.cta || 'cta' });
+      if (typeof window.fbq === 'function') window.fbq('track', 'Contact', { content_name: 'Quero participar', value: 1099, currency: 'BRL' });
+      if (typeof window.gtag === 'function') window.gtag('event', 'begin_checkout', { value: 1099, currency: 'BRL', cta_origem: el.dataset.cta || 'cta' });
       if (isPlaceholder(DOC_START_CONFIG.checkoutUrl)) {
         ev.preventDefault();
         console.warn('[DOC START] Configure o link de checkout em js/main.js.');

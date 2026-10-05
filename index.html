@@ -8,7 +8,7 @@
   PLACEHOLDERS A PREENCHER (busque pelo nome):
   LINK_CHECKOUT_DOC_START  → hoje os botões levam ao WhatsApp do Dr. Luan; trocar em js/main.js quando houver checkout
   WHATSAPP_DOC_START       → link do WhatsApp (definido em js/main.js)
-  LINK_VSL_DOC_START       → URL de incorporação da VSL (definida em js/main.js)
+  VSL_DOC_START            → vídeo local definido em js/main.js e salvo em assets/video/
   META_PIXEL_AQUI          → Pixel da Meta (neste <head>)
   GOOGLE_ANALYTICS_AQUI    → Google Analytics (neste <head>)
   URL_DA_PAGINA            → URL final (canonical e Open Graph)
@@ -168,14 +168,13 @@
 
     <div class="vsl-shell reveal">
       <div class="vsl-player" data-vsl-player>
-        <div class="vsl-placeholder">
-          <span class="vsl-kicker">Apresentação DOC START</span>
-          <span class="vsl-play" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M9 7.2v9.6L17 12z"/></svg>
-          </span>
-          <strong>Vídeo em breve</strong>
-          <span>Este espaço já está pronto para receber a VSL.</span>
-        </div>
+        <video class="vsl-video" data-vsl-video controls playsinline preload="none" aria-label="Apresentação em vídeo do curso DOC START">
+          Seu navegador não oferece suporte à reprodução deste vídeo.
+        </video>
+        <button class="vsl-audio-start" type="button" data-vsl-audio-start hidden>
+          <span aria-hidden="true">▶</span>
+          Começar com som
+        </button>
       </div>
     </div>
   </div>

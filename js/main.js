@@ -3,7 +3,7 @@
    ========================================================================== */
 
 /* ---------------- CONFIGURAÇÃO ----------------
-   Preencha os links finais. Botões, WhatsApp e o player da VSL são
+   Preencha os links finais. Botões, WhatsApp e o vídeo da VSL são
    atualizados automaticamente.
 ------------------------------------------------ */
 const WHATSAPP_NUMERO = '5512988376033'; // Dr. Luan: (12) 98837-6033
@@ -13,7 +13,7 @@ const DOC_START_CONFIG = {
   // Botões de inscrição: por enquanto levam ao WhatsApp. Troque pelo link do checkout quando existir.
   checkoutUrl: zap('Olá! Quero participar da primeira turma do DOC START.'),
   whatsappUrl: zap('Olá! Tenho uma dúvida sobre o DOC START.'),
-  vslEmbedUrl: 'LINK_VSL_DOC_START'        // ex.: URL de embed do YouTube, Vimeo, Panda ou VTurb
+  vslVideoUrl: 'assets/video/luan-inacio-vsl-1080p.mp4'
 };
 
 (function () {
@@ -25,14 +25,58 @@ const DOC_START_CONFIG = {
 
   /* ---------- VSL ---------- */
   const vslPlayer = document.querySelector('[data-vsl-player]');
-  if (vslPlayer && !isPlaceholder(DOC_START_CONFIG.vslEmbedUrl)) {
-    const iframe = document.createElement('iframe');
-    iframe.src = DOC_START_CONFIG.vslEmbedUrl;
-    iframe.title = 'Apresentação em vídeo do curso DOC START';
-    iframe.loading = 'lazy';
-    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-    iframe.allowFullscreen = true;
-    vslPlayer.replaceChildren(iframe);
+  const vslVideo = vslPlayer?.querySelector('[data-vsl-video]');
+  const vslAudioStart = vslPlayer?.querySelector('[data-vsl-audio-start]');
+  if (vslPlayer && vslVideo && vslAudioStart) {
+    let vslStarted = false;
+
+    const trackVslStart = () => {
+      if (typeof window.gtag === 'function') window.gtag('event', 'video_start', { video_title: 'VSL DOC START' });
+    };
+
+    const startVsl = async () => {
+      if (vslStarted) return;
+      vslStarted = true;
+
+      vslVideo.src = DOC_START_CONFIG.vslVideoUrl;
+      vslVideo.muted = false;
+      vslVideo.load();
+      vslPlayer.classList.add('is-active');
+
+      try {
+        await vslVideo.play();
+        trackVslStart();
+      } catch (error) {
+        vslAudioStart.hidden = false;
+        console.warn('[DOC START] O navegador bloqueou o autoplay com áudio; aguardando o clique do visitante.', error);
+      }
+    };
+
+    vslAudioStart.addEventListener('click', async () => {
+      vslAudioStart.hidden = true;
+      vslVideo.muted = false;
+
+      try {
+        await vslVideo.play();
+        trackVslStart();
+      } catch (error) {
+        vslAudioStart.hidden = false;
+        console.warn('[DOC START] Não foi possível iniciar o vídeo com áudio.', error);
+      }
+    });
+
+    if (hasIO) {
+      const vslObserver = new IntersectionObserver((entries, observer) => {
+        if (entries.some((entry) => entry.isIntersecting && entry.intersectionRatio >= 0.45)) {
+          startVsl();
+          observer.disconnect();
+        }
+      }, { threshold: [0.45] });
+
+      vslObserver.observe(vslPlayer);
+    } else {
+      startVsl();
+    }
   }
 
   /* ---------- Links + eventos de conversão ---------- */
